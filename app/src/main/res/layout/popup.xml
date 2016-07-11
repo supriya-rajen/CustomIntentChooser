@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    tools:context="com.example.test.customintentchooser.MainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:background="#0a539c"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="21dp"
+        android:padding="10dp"
+        android:text="Share via.."/>
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridView
+            android:id="@+id/choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:horizontalSpacing="14dp"
+            android:numColumns="auto_fit"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="14dp"
+            android:visibility="visible" />
+
+
+        <View
+            android:visibility="gone"
+            android:id="@+id/view"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:background="#979595"
+            android:layout_below="@+id/choose"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/print"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="2dip"
+                android:paddingTop="2dip"
+                android:paddingBottom="2dip"
+                android:paddingRight="5dip"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="Print"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
